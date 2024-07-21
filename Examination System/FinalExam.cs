@@ -72,6 +72,25 @@ namespace Examination_System
             return new FinalExam(time, questionNumber, questions);
 
         }
+        
+        // ---------------------------------------------------------------------------------------------------------------------
+
+        public override void ShowResults()
+        {
+            int ExamMark = 0, GainedMark = 0;
+            if (StudentAnswers is not null)
+            for (int i = 0; i < Questions.Count; i++)
+            {
+                ExamMark += Questions[i].Mark;
+                if (Questions[i].CorrectAnswer.Equals(StudentAnswers[i]))
+                {
+                    GainedMark += Questions[i].Mark;
+                }
+            }
+
+            PrintQuestionAndAnswers();
+            Console.WriteLine($"You Got {GainedMark} out of {ExamMark}");
+        }
 
         // --------------------------------------------------------------------------------------------------------------------
 
