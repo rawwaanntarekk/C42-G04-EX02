@@ -88,21 +88,9 @@ namespace Examination_System
 
         // --------------------------------------------------------------------------------------------------------------------
 
-        public override void ShowResults()
-        {
-            int ExamMark = 0, GainedMark = 0;
-            for (int i = 0; i < Questions.Count; i++)
-            {
-                ExamMark += Questions[i].Mark;
-                if (Questions[i].CorrectAnswer.Equals(StudentAnswers[i]))
-                {
-                    GainedMark += Questions[i].Mark;
-                }
-            }
+        
+        
 
-            PrintQuestionAndAnswers();
-            Console.WriteLine($"You Got {GainedMark} out of {ExamMark}");
-        } 
         #endregion
     }
 }

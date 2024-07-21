@@ -42,14 +42,7 @@ namespace Examination_System
 
         // --------------------------------------------------------------------------------------------------------------------
 
-        public override void ShowResults()
-        {
-            for (int i = 0; i < Questions.Count; i++)
-            {
-                Console.WriteLine($"Question {i + 1}'s right answer is {Questions[i].CorrectAnswer.Text}");
-            }
-
-        }
+       
 
         #endregion
         // --------------------------------------------------------------------------------------------------------------------
