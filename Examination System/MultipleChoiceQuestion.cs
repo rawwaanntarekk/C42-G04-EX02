@@ -19,7 +19,7 @@ namespace Examination_System
         // Constructor takes the body of the question, the mark of the question, the correct answer and the answers
         // the header is fixed for this type of question.
 
-        private MultipleChoiceQuestion(string _body, int _mark, Answer _correctAnswer, List<Answer> _answers)
+        private MultipleChoiceQuestion(string _body, double _mark, Answer _correctAnswer, List<Answer> _answers)
             : base("Choose One Answer Correct", _body, _mark, _correctAnswer, _answers) { }
 
         // ----------------------------------------------------------------------------------------------------------------------------------------
@@ -77,7 +77,7 @@ namespace Examination_System
 
             Console.WriteLine(Header);
             string body = ValidateBody();
-            int mark = ValidateMark();
+            double mark = ValidateMark();
             List<Answer> answers = ValidateAnswers();
             int correctAnswerIndex = ValidateCorrectAnswerIndex();
             Answer correctAnswer = answers[correctAnswerIndex - 1];

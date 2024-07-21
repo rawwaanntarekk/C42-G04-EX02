@@ -11,7 +11,7 @@ namespace Examination_System
         #region Constructors
         // Constructor takes the body of the question, the mark of the question, and the correct answer
         // the header and the answers are fixed for this type of question
-        private TFQuestion(string _body, int _mark, Answer _correctAnswer)
+        private TFQuestion(string _body, double _mark, Answer _correctAnswer)
             : base("True | False Question", _body, _mark, _correctAnswer, [new Answer(1, "True"), new Answer(2, "False")]) { }
 
         // ----------------------------------------------------------------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ namespace Examination_System
         {
             Console.WriteLine(Header);
             string body = ValidateBody();
-            int mark = ValidateMark();
+            double mark = ValidateMark();
             Answer correctAnswer = Answers[ValidateCorrectAnswerIndex() - 1];
             return new TFQuestion(body, mark, correctAnswer);
 

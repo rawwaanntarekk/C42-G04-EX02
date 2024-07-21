@@ -25,7 +25,7 @@ namespace Examination_System
             Time = _time;
             QuestionNumber = _questionNumber;
             Questions = _questions;
-            StudentAnswers = new List<Answer>();
+            StudentAnswers = [];
         }
 
         // --------------------------------------------------------------------------------------------------------------------

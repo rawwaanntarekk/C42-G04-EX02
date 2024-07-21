@@ -11,7 +11,7 @@ namespace Examination_System
         #region Properties
         public string Header { get; set; }
         public string Body { get; set; }
-        public int Mark { get; set; }
+        public double Mark { get; set; }
         public Answer CorrectAnswer { get; set; }
         public List<Answer> Answers { get; set; }
         #endregion
@@ -19,7 +19,7 @@ namespace Examination_System
         #region Constructors
         public Question() { }
 
-        protected Question(string _header, string _body, int _mark, Answer _correctAnswer, List<Answer> _answers)
+        protected Question(string _header, string _body, double _mark, Answer _correctAnswer, List<Answer> _answers)
         {
             Header = _header;
             Body = _body;
@@ -45,14 +45,14 @@ namespace Examination_System
 
         // ----------------------------------------------------------------------------------------------------------------------------------------
 
-        private protected static int ValidateMark()
+        private protected static double ValidateMark()
         {
-            int mark;
+            double mark;
             do
             {
                 Console.Write("Please Enter The Mark of Question: ");
 
-            } while (!int.TryParse(Console.ReadLine() ?? "0", out mark) || mark <= 0);
+            } while (!double.TryParse(Console.ReadLine() ?? "0", out mark) || mark <= 0);
 
             return mark;
         }
@@ -81,7 +81,7 @@ namespace Examination_System
 
         public override string ToString()
         {
-            StringBuilder answers = new StringBuilder();
+            StringBuilder answers = new();
             foreach (Answer answer in Answers)
             {
                 answers.Append($"{answer.Id}. {answer.Text}\n");

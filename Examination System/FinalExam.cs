@@ -96,7 +96,7 @@ namespace Examination_System
         public override void ShowResults()
         {
             // Show the student mark after finishing + Calling PrintQuestionAndAnswers()
-            int ExamMark = 0, GainedMark = 0;
+            double ExamMark = 0, GainedMark = 0;
             if (StudentAnswers is not null)
             for (int i = 0; i < Questions.Count; i++)
             {
