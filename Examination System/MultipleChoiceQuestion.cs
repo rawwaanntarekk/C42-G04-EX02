@@ -31,7 +31,7 @@ namespace Examination_System
         // Recieving & Validating the Answers => No Null or Empty Answers and Answer = 4
         private static List<Answer> ValidateAnswers()
         {
-            List<Answer> answers = new List<Answer>(4);
+            List<Answer> answers = new(4);
             string text;
 
             for (int i = 0; i < 4; i++)

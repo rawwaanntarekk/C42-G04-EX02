@@ -104,15 +104,14 @@ namespace Examination_System
             Console.WriteLine($"Number Of Questions: {QuestionNumber}");
             for (int i = 0; i < QuestionNumber; i++)
             {
-                Console.WriteLine($"Question Number {i + 1}");
+                Console.WriteLine($"\nQuestion Number {i + 1}");
                 Console.WriteLine("-------------------------------");
                 Console.WriteLine(Questions[i].ToString());
                 Console.WriteLine("-------------------------------");
                 StudentAnswers?.Add(Questions[i].RecieveAnswer());
-                Console.Clear();
 
             }
-
+            Console.Clear();
             ShowResults();
         }
 

@@ -46,7 +46,7 @@ namespace Examination_System
             int time = ValidateTime();
             int questionNumber = ValidateQuestionNumber();
             Console.Clear();
-            List<Question> questions = new List<Question>(QuestionNumber);
+            List<Question> questions = new(QuestionNumber);
             for (int i = 0; i < questionNumber; i++)
             {
                 Console.WriteLine($"Question Number {i + 1}:");
@@ -84,6 +84,8 @@ namespace Examination_System
                 for (int i = 0; i < Questions.Count; i++)
                 {
                     Console.WriteLine($"Q{i + 1})\t {Questions[i].Body}: {(StudentAnswers[i].Text) ?? ""}");
+                    Console.WriteLine($"The correct answer is: {Questions[i].CorrectAnswer.Text} ");
+                    Console.WriteLine("-----------------------");
 
                 }
         }
@@ -106,7 +108,7 @@ namespace Examination_System
             }
 
             PrintQuestionAndAnswers();
-            Console.WriteLine($"You Got {GainedMark} out of {ExamMark}");
+            Console.WriteLine($"\nYou Got {GainedMark} out of {ExamMark}");
         }
 
         // --------------------------------------------------------------------------------------------------------------------
