@@ -50,7 +50,7 @@ namespace Examination_System
 
             do
             {
-                Console.Write("Please Enter The Time Of The Exam: ");
+                Console.Write("Please Enter The Time Of The Exam [in minutes]: ");
             } while (!int.TryParse(Console.ReadLine(), out time) || time <= 0);
 
             return time;
