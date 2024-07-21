@@ -26,7 +26,7 @@ namespace Examination_System
                 stopwatch.Start();
                 subject.Exam.ShowExam();
                 stopwatch.Stop();
-                Console.WriteLine($"The Exam Time Is: {stopwatch.Elapsed}");
+                Console.WriteLine($"The Elapsed Time Is: {stopwatch.Elapsed}");
 
             }
         }

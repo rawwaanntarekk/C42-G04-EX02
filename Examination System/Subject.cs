@@ -33,6 +33,7 @@ namespace Examination_System
             {
                 Console.WriteLine("Please Enter The Number Of The Exam Type: ");
                 Console.WriteLine("1- Practical Exam\n2- Final Exam");
+                Console.Write("Your Choice: ");
 
             } while (!int.TryParse(Console.ReadLine(), out Type) || Type < 1 || Type > 2);
 

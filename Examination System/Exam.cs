@@ -100,7 +100,7 @@ namespace Examination_System
         public void ShowExam()
         {
 
-            Console.WriteLine($"Time: {Time}");
+            Console.WriteLine($"Time: {Time} minutes");
             Console.WriteLine($"Number Of Questions: {QuestionNumber}");
             for (int i = 0; i < QuestionNumber; i++)
             {
