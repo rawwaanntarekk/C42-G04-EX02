@@ -72,11 +72,28 @@ namespace Examination_System
             return new FinalExam(time, questionNumber, questions);
 
         }
-        
+
         // ---------------------------------------------------------------------------------------------------------------------
+
+
+        // Print Each Question with the chosen answer for the student
+        private void PrintQuestionAndAnswers()
+        {
+            Console.WriteLine("Your Answers:");
+            if (StudentAnswers is not null)
+                for (int i = 0; i < Questions.Count; i++)
+                {
+                    Console.WriteLine($"Q{i + 1})\t {Questions[i].Body}: {(StudentAnswers[i].Text) ?? ""}");
+
+                }
+        }
+
+        // --------------------------------------------------------------------------------------------------------------------
+
 
         public override void ShowResults()
         {
+            // Show the student mark after finishing + Calling PrintQuestionAndAnswers()
             int ExamMark = 0, GainedMark = 0;
             if (StudentAnswers is not null)
             for (int i = 0; i < Questions.Count; i++)
@@ -94,18 +111,6 @@ namespace Examination_System
 
         // --------------------------------------------------------------------------------------------------------------------
 
-        private void PrintQuestionAndAnswers()
-        {
-            Console.WriteLine("Your Answers:");
-            if (StudentAnswers is not null)
-                for (int i = 0; i < Questions.Count; i++)
-                {
-                    Console.WriteLine($"Q{i + 1})\t {Questions[i].Body}: {(StudentAnswers[i].Text) ?? ""}");
-
-                }
-        }
-
-        // --------------------------------------------------------------------------------------------------------------------
 
         
         

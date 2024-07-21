@@ -26,7 +26,7 @@ namespace Examination_System
             int questionNumber = ValidateQuestionNumber();
             Console.Clear();
 
-            List<Question> questions = new List<Question>(QuestionNumber);
+            List<Question> questions = new(QuestionNumber);
 
             for (int i = 0; i < questionNumber; i++)
             {
